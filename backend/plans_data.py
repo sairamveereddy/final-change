@@ -65,6 +65,7 @@ LIC_PLANS = [
         "key_benefits": "Guaranteed additions every year, bonus accumulation, death benefit covers premium waiver, maturity benefit for child's milestone needs, tax benefits, loan facility available"
     },
     {
+        "id": "lic-new-jeevan-amar",
         "name": "LIC's New Jeevan Amar",
         "category": "protect_family",
         "type": "lic",
