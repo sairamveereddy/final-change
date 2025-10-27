@@ -165,6 +165,7 @@ HDFC_PLANS = [
         "key_benefits": "Age-appropriate coverage, cashless treatment at network hospitals, covers pre-existing diseases after waiting period, no claim bonus, health check-ups included, tax benefits for senior citizens up to ₹50,000 under 80D"
     },
     {
+        "id": "hdfc-car-comprehensive",
         "name": "HDFC ERGO Car Insurance - Comprehensive",
         "category": "motor",
         "type": "hdfc",
