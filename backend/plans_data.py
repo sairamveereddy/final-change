@@ -49,6 +49,7 @@ LIC_PLANS = [
         "key_benefits": "Immediate income starts, guaranteed lifelong payments, no medical examination, flexible payment frequency, return of capital option available, tax benefits on annuity income"
     },
     {
+        "id": "lic-amritbal",
         "name": "LIC's Amritbal",
         "category": "children_future",
         "type": "lic",
