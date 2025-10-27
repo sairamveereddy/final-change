@@ -81,6 +81,7 @@ LIC_PLANS = [
         "key_benefits": "Very affordable premiums, high life cover, financial security for family, tax benefits under 80C and 10(10D), easy claim settlement"
     },
     {
+        "id": "lic-jeevan-umang",
         "name": "LIC's Jeevan Umang",
         "category": "retirement_planning",
         "type": "lic",
