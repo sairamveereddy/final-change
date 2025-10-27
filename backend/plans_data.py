@@ -112,6 +112,7 @@ LIC_PLANS = [
 # HDFC ERGO Plans Data
 HDFC_PLANS = [
     {
+        "id": "hdfc-optima-secure-health",
         "name": "HDFC ERGO Optima Secure Health Insurance",
         "category": "health",
         "type": "hdfc",
