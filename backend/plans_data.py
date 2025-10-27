@@ -133,6 +133,7 @@ HDFC_PLANS = [
         "key_benefits": "Cashless hospitalization at network hospitals, restoration of sum insured, automatic sum insured increase, maternity coverage (with rider), no claim bonus up to 100%, tax benefits under 80D"
     },
     {
+        "id": "hdfc-critical-illness-platinum",
         "name": "HDFC ERGO Critical Illness Insurance - Platinum",
         "category": "health",
         "type": "hdfc",
