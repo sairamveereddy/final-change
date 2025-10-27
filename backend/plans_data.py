@@ -33,6 +33,7 @@ LIC_PLANS = [
         "key_benefits": "Lifetime coverage, high sum assured with no upper limit, death benefit guaranteed, loan facility, tax benefits, ideal for wealth transfer planning"
     },
     {
+        "id": "lic-jeevan-akshay",
         "name": "LIC's Jeevan Akshay",
         "category": "retirement_planning",
         "type": "lic",
