@@ -1,14 +1,13 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException, Query
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict
-from typing import List
-import uuid
-from datetime import datetime, timezone
+from typing import List, Optional
+from models import Plan, ContactForm
+from plans_data import ALL_PLANS
 
 
 ROOT_DIR = Path(__file__).parent
@@ -26,45 +25,51 @@ app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 
-# Define Models
-class StatusCheck(BaseModel):
-    model_config = ConfigDict(extra="ignore")  # Ignore MongoDB's _id field
-    
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
-class StatusCheckCreate(BaseModel):
-    client_name: str
-
-# Add your routes to the router instead of directly to app
+# Routes
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "VSR Insurance Plus API"}
 
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.model_dump()
-    status_obj = StatusCheck(**status_dict)
+@api_router.get("/plans", response_model=List[Plan])
+async def get_plans(
+    category: Optional[str] = Query(None),
+    type: Optional[str] = Query(None)
+):
+    """Get all plans or filter by category and type"""
+    plans = []
     
-    # Convert to dict and serialize datetime to ISO string for MongoDB
-    doc = status_obj.model_dump()
-    doc['timestamp'] = doc['timestamp'].isoformat()
+    for plan_data in ALL_PLANS:
+        plan = Plan(**plan_data)
+        
+        # Apply filters
+        if category and plan.category != category:
+            continue
+        if type and plan.type != type:
+            continue
+            
+        plans.append(plan)
     
-    _ = await db.status_checks.insert_one(doc)
-    return status_obj
+    return plans
 
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    # Exclude MongoDB's _id field from the query results
-    status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
+@api_router.get("/plans/{plan_id}", response_model=Plan)
+async def get_plan(plan_id: str):
+    """Get a specific plan by ID"""
+    for plan_data in ALL_PLANS:
+        plan = Plan(**plan_data)
+        if plan.id == plan_id:
+            return plan
     
-    # Convert ISO string timestamps back to datetime objects
-    for check in status_checks:
-        if isinstance(check['timestamp'], str):
-            check['timestamp'] = datetime.fromisoformat(check['timestamp'])
-    
-    return status_checks
+    raise HTTPException(status_code=404, detail="Plan not found")
+
+@api_router.post("/contact", response_model=ContactForm)
+async def submit_contact_form(contact: ContactForm):
+    """Submit a contact form"""
+    try:
+        await db.contact_forms.insert_one(contact.dict())
+        return contact
+    except Exception as e:
+        logging.error(f"Error saving contact form: {e}")
+        raise HTTPException(status_code=500, detail="Error submitting contact form")
 
 # Include the router in the main app
 app.include_router(api_router)
