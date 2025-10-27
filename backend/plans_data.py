@@ -97,6 +97,7 @@ LIC_PLANS = [
         "key_benefits": "Annual survival benefits (8% of SA), lifelong coverage, maturity benefit at age 100, death benefit throughout, loan facility, tax benefits"
     },
     {
+        "id": "lic-new-jeevan-anand",
         "name": "LIC's New Jeevan Anand",
         "category": "wealth_creation",
         "type": "lic",
