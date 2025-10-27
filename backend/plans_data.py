@@ -181,6 +181,7 @@ HDFC_PLANS = [
         "key_benefits": "Cashless repairs at 7000+ garages, instant policy issuance, online claim tracking, no claim bonus up to 50%, voluntary deductible for lower premium, add-on covers for enhanced protection"
     },
     {
+        "id": "hdfc-two-wheeler",
         "name": "HDFC ERGO Two Wheeler Insurance",
         "category": "motor",
         "type": "hdfc",
