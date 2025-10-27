@@ -17,6 +17,7 @@ LIC_PLANS = [
         "key_benefits": "Pure death benefit coverage, affordable premiums, tax benefits under Section 80C & 10(10D), flexible sum assured options, no medical checkup for lower sum assured"
     },
     {
+        "id": "lic-jeevan-utsav",
         "name": "LIC's Jeevan Utsav",
         "category": "wealth_creation",
         "type": "lic",
