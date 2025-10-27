@@ -1,6 +1,7 @@
 # LIC Plans Data
 LIC_PLANS = [
     {
+        "id": "lic-new-tech-term",
         "name": "LIC's New Tech Term",
         "category": "protect_family",
         "type": "lic",
