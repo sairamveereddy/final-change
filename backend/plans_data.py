@@ -197,6 +197,7 @@ HDFC_PLANS = [
         "key_benefits": "Affordable premiums, quick claim settlement, no claim bonus benefits, add-on covers like zero depreciation available, online renewal in minutes, 24x7 customer support"
     },
     {
+        "id": "hdfc-travel",
         "name": "HDFC ERGO Travel Insurance",
         "category": "travel",
         "type": "hdfc",
