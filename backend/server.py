@@ -65,7 +65,7 @@ async def get_plan(plan_id: str):
 async def submit_contact_form(contact: ContactForm):
     """Submit a contact form"""
     try:
-        await db.contact_forms.insert_one(contact.dict())
+        await db.contact_forms.insert_one(contact.model_dump())
         return contact
     except Exception as e:
         logging.error(f"Error saving contact form: {e}")
