@@ -213,6 +213,7 @@ HDFC_PLANS = [
         "key_benefits": "Worldwide coverage, medical expenses up to sum insured, trip cancellation/delay compensation, lost baggage/passport compensation, 24x7 travel assistance, cashless hospitalization globally"
     },
     {
+        "id": "hdfc-home",
         "name": "HDFC ERGO Home Insurance",
         "category": "home",
         "type": "hdfc",
