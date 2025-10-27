@@ -149,6 +149,7 @@ HDFC_PLANS = [
         "key_benefits": "Lump sum payout on diagnosis, covers treatment and income replacement, no hospitalization required for claim, tax benefits under Section 80D, affordable premiums, covers multiple critical conditions"
     },
     {
+        "id": "hdfc-optima-senior-health",
         "name": "HDFC ERGO Optima Senior Health Insurance",
         "category": "health",
         "type": "hdfc",
