@@ -229,6 +229,7 @@ HDFC_PLANS = [
         "key_benefits": "Complete home protection, covers building and contents, replacement value for contents, alternative accommodation expenses, worldwide cover for jewelry and valuables, public liability cover"
     },
     {
+        "id": "hdfc-personal-accident",
         "name": "HDFC ERGO Personal Accident Insurance",
         "category": "accident",
         "type": "hdfc",
