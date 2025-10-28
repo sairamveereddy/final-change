@@ -96,7 +96,7 @@ const Header = () => {
               className="text-gray-700 hover:text-[#003876] py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Insurance Plans
+              HDFC ERGO Plans
             </Link>
             <Link
               to="/about"
