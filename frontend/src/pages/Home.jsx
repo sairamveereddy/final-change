@@ -2,6 +2,68 @@ import React from 'react';
 import { Shield, Users, Award, Clock, CheckCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// HDFC Plans Preview Component
+const HDFCPlansPreview = () => {
+  const [hdfcPlans, setHdfcPlans] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    fetchHDFCPlans();
+  }, []);
+
+  const fetchHDFCPlans = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/api/plans?type=hdfc`
+      );
+      const data = await response.json();
+      setHdfcPlans(data.slice(0, 3));
+    } catch (error) {
+      console.error('Error fetching HDFC plans:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-gray-600">Loading HDFC ERGO plans...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {hdfcPlans.map((plan) => (
+        <div key={plan.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow border border-gray-200">
+          <div className="mb-4">
+            <span className="inline-block bg-[#003876] text-white px-3 py-1 rounded-full text-xs mb-3">
+              HDFC ERGO
+            </span>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">{plan.name}</h3>
+          </div>
+          <ul className="space-y-3 mb-6">
+            {plan.features.slice(0, 2).map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Link
+            to={`/plan/${plan.id}`}
+            className="block w-full bg-[#003876] text-white text-center py-3 rounded-lg font-semibold hover:bg-[#002856] transition-colors"
+          >
+            View Details →
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Home = () => {
   const [activeCategory, setActiveCategory] = React.useState('protect_family');
   const [plans, setPlans] = React.useState([]);
