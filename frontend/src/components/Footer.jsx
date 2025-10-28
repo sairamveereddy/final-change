@@ -35,7 +35,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/insurance-plans" className="text-gray-300 hover:text-[#FFD700] transition-colors">
-                  Insurance Plans
+                  HDFC ERGO Plans
                 </Link>
               </li>
               <li>
