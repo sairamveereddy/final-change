@@ -235,6 +235,29 @@ const Home = () => {
         </div>
       </section>
 
+      {/* HDFC ERGO Plans Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#003876] mb-4 text-center">
+            Comprehensive Insurance from HDFC ERGO!
+          </h2>
+          <p className="text-xl text-gray-600 mb-10 text-center">
+            Health, Motor, Travel, Home & Accident Insurance Solutions
+          </p>
+
+          <HDFCPlansPreview />
+
+          <div className="text-center">
+            <Link
+              to="/insurance-plans"
+              className="inline-block bg-[#FFD700] text-[#003876] px-8 py-3 rounded-lg font-semibold hover:bg-[#FFC700] transition-colors"
+            >
+              View All HDFC ERGO Plans
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-[#003876] text-white">
         <div className="container mx-auto px-4 text-center">
