@@ -49,7 +49,7 @@ const Header = () => {
               LIC Plans
             </Link>
             <Link to="/insurance-plans" className="text-gray-700 hover:text-[#003876] transition-colors">
-              Insurance Plans
+              HDFC ERGO Plans
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-[#003876] transition-colors">
               About
