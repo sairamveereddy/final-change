@@ -1,5 +1,11 @@
-# LIC Plans Data
-LIC_PLANS = [
+# Import extended LIC plans
+from extended_lic_plans import EXTENDED_LIC_PLANS
+
+# LIC Plans Data (using extended list)
+LIC_PLANS = EXTENDED_LIC_PLANS
+
+# Keep original for reference
+ORIGINAL_LIC_PLANS = [
     {
         "id": "lic-new-tech-term",
         "name": "LIC's New Tech Term",
