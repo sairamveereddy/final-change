@@ -110,6 +110,9 @@ const Contact = () => {
                     <p className="text-sm text-gray-500 mt-1">
                       Pan India Service Available
                     </p>
+                    <p className="text-sm text-gray-500">
+                      International Services for NRIs & Abroad
+                    </p>
                   </div>
                 </div>
 
