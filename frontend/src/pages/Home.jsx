@@ -209,7 +209,7 @@ const Home = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                   <p className="text-gray-700">
-                    Supporting NRIs and busy professionals remotely without branch visits
+                    Supporting NRIs and busy professionals remotely without branch visits - International services with mail order business provision and online login & completion
                   </p>
                 </div>
               </div>
