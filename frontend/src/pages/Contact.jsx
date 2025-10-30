@@ -148,6 +148,29 @@ const Contact = () => {
                 </p>
               </div>
 
+              {/* International Services */}
+              <div className="mt-6 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <h3 className="font-semibold text-lg text-[#003876] mb-3">International Services</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#003876] mt-1">✓</span>
+                    <span>NRI Policy Services with Mail Order Business</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#003876] mt-1">✓</span>
+                    <span>Online Login and Policy Completion</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#003876] mt-1">✓</span>
+                    <span>Remote Documentation and Support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#003876] mt-1">✓</span>
+                    <span>Worldwide Assistance Available</span>
+                  </li>
+                </ul>
+              </div>
+
               {/* Quick Actions */}
               <div className="mt-6 flex flex-col gap-3">
                 <a
