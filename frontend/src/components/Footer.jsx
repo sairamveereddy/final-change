@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#2c3e50] text-white mt-16">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">VSR INSURANCE PLUS</h3>
@@ -66,6 +66,19 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* International Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">International Policies</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>NRI Policy Services</li>
+              <li>International Coverage</li>
+              <li>Mail Order Business</li>
+              <li>Online Login & Completion</li>
+              <li>Remote Documentation</li>
+              <li>Worldwide Support</li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
@@ -84,6 +97,7 @@ const Footer = () => {
                 <div>
                   <p>Hyderabad, India</p>
                   <p className="text-gray-400">Pan India Service Available</p>
+                  <p className="text-gray-400 mt-1">International Services for NRIs</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
