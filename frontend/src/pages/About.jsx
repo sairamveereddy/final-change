@@ -148,11 +148,11 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-gray-900 mb-2">
-                    Pan India Service
+                    Pan India & International Service
                   </h3>
                   <p className="text-gray-600">
                     Supporting NRIs and busy professionals remotely without branch visits. Digital onboarding 
-                    available from anywhere in India.
+                    available from anywhere in India and abroad. Mail order business provision with online login and completion.
                   </p>
                 </div>
               </div>
